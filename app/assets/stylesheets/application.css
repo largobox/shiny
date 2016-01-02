@@ -13,3 +13,90 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic);
+
+body {
+	font-family: 'PT Sans', sans-serif;
+	background: #ECE4F0;
+}
+
+.top_cont {
+  background: #61267E;
+  height: 140px;
+  position: relative;
+}
+
+.mid_cont {
+	position: absolute;
+	left: 50%;
+	margin-left: -490px;
+	margin-top: 20px;
+  width: 980px;
+  min-height: 800px;
+}
+
+.content_cont {
+  display: inline-block;
+  float: left;
+  width: 700px;
+  margin-right: 36px;
+}
+
+.sidebar {
+  display: inline-block;
+  background: #61267E;
+  margin-top: 15px;	
+  width: 240px;	
+  height: 300px;
+}
+
+.menu_cont {
+	background: #985EB5;
+  width: 980px;
+  height: 50px;
+  position: absolute;
+	left: 50%;
+	bottom: 0px;
+	margin-left: -490px;
+	border-top-left-radius: 8px;   
+	border-top-right-radius: 8px;   
+}
+
+.menu_elem {
+	width: 176px;
+	height: 50px;
+	display: inline-block;
+	margin-left: 40px;
+	font-size: 22px;
+	border-right: 1px solid #61267E;
+}
+
+.menu_elem a{
+	color: white;
+  text-decoration: none;
+}
+
+.menu_elem:hover a {
+	color: #61226F;
+}
+
+.chosen_mark {
+	display: none;
+	border-radius: 45px;
+	width: 90px;
+	height: 90px;
+	margin-left: 80px;
+	margin-top: 10px;
+	background: #ECE4F0;
+}
+
+#menu_elem_1:hover > #chosen_mark_1 {
+	display: block;
+}
+#menu_elem_2:hover > #chosen_mark_2 {
+	display: block;
+}
+#menu_elem_3:hover > #chosen_mark_3 {
+	display: block;
+}

@@ -8,7 +8,29 @@
 </head>
 <body>
 
-<%= yield %>
+	<div class = 'top_cont'>
+		<div class = 'menu_cont'>
+			<div class = 'menu_elem' id = 'menu_elem_1'><%= link_to 'Блог', blog_path %>
+				<div class = 'chosen_mark' id = 'chosen_mark_1'>
+				</div>
+			</div>
+			<div class = 'menu_elem' id = 'menu_elem_2'><%= link_to 'Основы', basics_path %>
+				<div class = 'chosen_mark' id = 'chosen_mark_2'>
+				</div>
+			</div>
+			<div class = 'menu_elem' id = 'menu_elem_3'><%= link_to 'Гайды', guides_path %>
+				<div class = 'chosen_mark' id = 'chosen_mark_3'>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class = 'mid_cont'>
+		<div class = 'content_cont'>
+	    <%= yield %>
+		</div>
+		<div class = 'sidebar'>
+		</div>
+	</div>
 
 </body>
 </html>

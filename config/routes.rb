@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  root 'articles#index'
-  resources :articles
+  root 'articles#blog'
+
+  get 'blog',   to: 'articles#blog'
+  get 'basics', to: 'articles#basics'
+  get 'guides', to: 'articles#guides'
+
   resources :comments
   resources :likes
   

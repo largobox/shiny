@@ -1,4 +1,10 @@
 class ArticlesController < ApplicationController
-	def index		
+	def blog		
+	end
+
+	def basics		
+	end
+
+	def guides		
 	end
 end
