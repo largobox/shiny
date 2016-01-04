@@ -18,13 +18,28 @@
 
 body {
 	font-family: 'PT Sans', sans-serif;
-	background: #ECE4F0;
+	/*background: #ECE4F0;*/
+	background: #fff;
+	color: #777;
 }
 
 .top_cont {
   background: #61267E;
   height: 140px;
   position: relative;
+}
+
+.login_cont {
+  position: absolute;
+  left: 50%;
+	right: 0px;
+	margin-top: 40px;
+	margin-left: 410px;
+}
+
+.login_cont a{
+	font-size: 16px;
+  color: #fff;	
 }
 
 .mid_cont {
@@ -72,23 +87,22 @@ body {
 	border-right: 1px solid #61267E;
 }
 
-.menu_elem a{
+.menu_elem p{
 	color: white;
-  text-decoration: none;
 }
 
-.menu_elem:hover a {
+.menu_elem:hover p {
 	color: #61226F;
 }
 
 .chosen_mark {
 	display: none;
 	border-radius: 45px;
-	width: 90px;
-	height: 90px;
-	margin-left: 80px;
-	margin-top: 10px;
-	background: #ECE4F0;
+	width:70px;
+	height: 70px;
+	margin-left: 90px;
+	margin-top: -25px;
+	background: #fff;
 }
 
 #menu_elem_1:hover > #chosen_mark_1 {
@@ -99,4 +113,40 @@ body {
 }
 #menu_elem_3:hover > #chosen_mark_3 {
 	display: block;
+}
+
+.devise_custom_cont {
+	font-size: 14px;
+	width: 445px;
+}
+
+.devise_custom_field {
+	margin-top: 10px;
+}
+
+.devise_custom_btn button {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	height: 30px;
+	width: 120px;
+	border-radius: 12px;
+  background: #61267E;
+  margin-top: 10px;
+  margin-left: 235px;
+}
+
+.devise_custom_btn button:not(.disabled):hover {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	background: #985EB5;
+}
+
+.error_custom_cont {
+	background: #985EB5;
+	border: 2px solid #61267E;
+	border-radius: 8px;
+	color: #fff;
+	padding: 7px;
 }

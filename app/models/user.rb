@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 	
-  has_many :comments
+  has_many :shiny_comments
   has_many :likes
   has_many :views	  	
   
@@ -8,4 +8,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_attached_file :profile_pic, styles: { medium: "300x300>", small: "100x100>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
 end

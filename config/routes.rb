@@ -9,6 +9,14 @@ Rails.application.routes.draw do
   get 'basics', to: 'articles#basics'
   get 'guides', to: 'articles#guides'
 
+  get 'profile', to: 'users#profile'
+  get 'edit_profile', to: 'users#edit_profile'
+  patch 'update_profile', to: 'users#update_profile'
+
+  post 'comment_up',   to: 'comments#comment_up'
+  post 'comment_down',   to: 'comments#comment_down'
+  post 'create_sub_comment', to: 'comments#create_sub_comment'
+
   resources :comments
   resources :likes
   

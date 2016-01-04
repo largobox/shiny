@@ -1,0 +1,2 @@
+class ShinyCommentsController < ApplicationController
+end
