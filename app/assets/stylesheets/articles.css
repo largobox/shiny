@@ -1,4 +1,5 @@
 .article_block {
+  color: #363436; 
 	display: inline-block;
 	float: left;
   margin: 15px;
@@ -11,8 +12,7 @@
 	opacity: 1.0;
 }
 
-.article-_pic {
-  background: #61267E;
+.article_pic img {
   border-radius: 12px;
 	width: 320px;
 	height: 198px;
@@ -28,6 +28,7 @@
 	margin-top: 8px;
 	margin-left: 5px;
 	font-size: 16px;
+  color: #5E5E5E; 
 }
 
 .article_preview a {
@@ -52,4 +53,67 @@
 	border-radius: 2px; 
 	height: 12px;
 	width: 19px;
+}
+
+.article_cont {
+	font-size: 16px;
+	min-height: 600px;
+	width: 700px;
+	margin-bottom: 40px;
+}
+
+.skill_cont {
+  min-height: 88px;
+}
+
+.skill_pic img {
+  border-radius: 8px;
+  float: left; 
+  height: 82px;
+	margin-top: 6px;
+  margin-right: 9px;
+  width: 82px;
+}
+
+.article_cont hr {
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.small_pic {
+	display: inline-block;
+}
+
+.small_pic img {
+	width: 25px;
+	border-radius: 3px;
+}
+
+.item_pic {
+	display: inline-block;
+
+}
+
+.item_pic img {
+	width: 32px;
+	float: left;
+	border-radius: 4px;
+}
+
+.article_text_block {
+	margin-bottom: 10px;
+}
+
+.article_additional_info {
+	float: right;
+	margin-bottom: 40px;
+}
+
+.article_additional_info a {
+	font-size: 16px;
+}
+
+.article_inf_elem {
+	font-size: 12px;
+	display: block;
 }

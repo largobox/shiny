@@ -1,0 +1,82 @@
+<h2><%= @article_title %></h2>
+
+<div class = 'return_link'>
+  <%= link_to "К тексту статьи", article_path(params[:article_id]) %>
+</div>
+
+<div class = 'parent_comments_cont'>
+	<% @comments.each do |c| %>
+		<div class = 'comment_cont'>
+		  <div class = 'l_comment_block'>
+			  <div class = 'author_pic'>
+			  </div>
+		  </div>
+		  <div class = 'r_comment_block'>
+			  <div class = 'additional_inf'>
+			  	<div class = 'nickname'>
+			  	  Марон	
+			  	</div>
+			  	<div class = 'added_date'>
+			  	  01.01.2016	
+			  	</div>
+
+			  	<div class = 'likes_cont'>
+			  		<% if  current_user.nil?  %>
+			  			<div class = 'like_dislike_comment call_popup'>
+						  	<%= link_to '–', '#' %>
+				  		</div>
+				  	<% elsif not @user_comments_id.include? c.id %>
+				  		<div class = 'like_dislike_comment'>
+						  	<%= link_to '–', comment_dislike_path(c.id), method: :post %>
+				  		</div>
+				  	<% else %>
+				 			<div class = 'like_dislike_comment call_popup'>
+				  		</div>
+			  		<% end %>
+
+			  		<% if c.likes < 0 %>
+			  		  <div class = 'negative_likes'>
+			  		    <%= c.likes %>
+			  		  </div>
+			  		<% else %>
+			  		  <div class = 'positive_likes'>
+			  		    <%= c.likes %>
+			  		  </div>
+			  		<% end %>
+
+			  		<% if  current_user.nil?  %>
+			  			<div class = 'like_dislike_comment call_popup'>
+						  	<%= link_to '+', '#' %>
+				  		</div>
+				  	<% elsif not @user_comments_id.include? c.id %>
+				  		<div class = 'like_dislike_comment'>
+						  	<%= link_to '+', comment_like_path(c.id), method: :post %>
+				  		</div>
+				  	<% else %>
+				 			<div class = 'like_dislike_comment call_popup'>
+				  		</div>	
+			  		<% end %>
+			  	</div>
+
+			  </div>
+			  <div class = 'comment_body'>
+			  	<%= c.body %>
+			  </div>	
+		  </div>
+		</div>
+	<% end %>
+
+<% if current_user.nil? %>
+  <div class = 'comment_add_notice'>
+    Для того, чтобы оставить комментарий необходимо <%= link_to 'Авторизоваться', new_user_session_path %>
+  </div>
+<% else %>
+	<div class = 'add_comment_form'>
+	  <%= render template: 'shiny_comments/new' %>
+	</div>
+<% end %>
+
+</div>
+<%= render template: 'users/sessions/new_custom' %>
+
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104094407) do
+ActiveRecord::Schema.define(version: 20160107123503) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,11 +32,16 @@ ActiveRecord::Schema.define(version: 20160104094407) do
     t.string   "title"
     t.string   "topic"
     t.text     "body"
-    t.integer  "likes",      default: 0
-    t.integer  "views",      default: 0
-    t.integer  "comments",   default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "likes",                    default: 0
+    t.integer  "views",                    default: 0
+    t.integer  "comments",                 default: 0
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.string   "preview"
+    t.string   "article_pic_file_name"
+    t.string   "article_pic_content_type"
+    t.integer  "article_pic_file_size"
+    t.datetime "article_pic_updated_at"
   end
 
   create_table "likes", force: :cascade do |t|

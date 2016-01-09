@@ -18,10 +18,20 @@
 
 body {
 	font-family: 'PT Sans', sans-serif;
-	/*background: #ECE4F0;*/
 	background: #fff;
-	color: #777;
+	color: #595659;
 }
+
+h2 {
+	font-size: 32px;
+	color: #363436;	
+}
+
+h3 {
+	font-size: 22px;
+	color: #5E5E5E;
+}
+
 
 .top_cont {
   background: #61267E;
@@ -132,8 +142,6 @@ body {
 	width: 120px;
 	border-radius: 12px;
   background: #61267E;
-  margin-top: 10px;
-  margin-left: 235px;
 }
 
 .devise_custom_btn button:not(.disabled):hover {

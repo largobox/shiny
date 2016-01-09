@@ -1,103 +1,21 @@
-<div class = 'article_block'>
-	<div class = 'article-_pic'>
-	</div>
-	<div class = 'article_title'>
-	  Название статьи, которое очень красиво смотрится, когда на него смотришь
-	</div>
-	<div class = 'article_preview'>
-		Пару слов об этой статье, которые ласкают слух.
-		<div class = 'comment_pic'>
+<% @articles.each do |a| %>
+	<%= link_to article_path(a.id) do %>
+		<div class = 'article_block'>
+			<div class = 'article_pic'>
+			  <%= image_tag a.article_pic.url(:normal) %>
+			</div>
+			<div class = 'article_title'>
+			  <%= a.title %>
+			</div>
+			<div class = 'article_preview'>
+				  <%= a.preview %>
+				<div class = 'comment_pic'>
+				</div>
+			    <%= a.likes %>
+			  <div class = 'view_pic'>
+				</div>
+				  <%= a.views %>
+			</div>
 		</div>
-	  <%= link_to '7'%>
-	  <div class = 'view_pic'>
-		</div>
-		<%= link_to '13'%>  	
-	</div>
-</div>
-
-<div class = 'article_block'>
-	<div class = 'article-_pic'>
-	</div>
-	<div class = 'article_title'>
-	  Название статьи, которое очень красиво смотрится, когда на него смотришь
-	</div>
-	<div class = 'article_preview'>
-		Пару слов об этой статье, которые ласкают слух.
-		<div class = 'comment_pic'>
-		</div>
-	  <%= link_to '7'%>
-	  <div class = 'view_pic'>
-		</div>
-		<%= link_to '13'%>  	
-	</div>
-</div>
-
-<div class = 'article_block'>
-	<div class = 'article-_pic'>
-	</div>
-	<div class = 'article_title'>
-	  Название статьи, которое очень красиво смотрится, когда на него смотришь
-	</div>
-	<div class = 'article_preview'>
-		Пару слов об этой статье, которые ласкают слух.
-		<div class = 'comment_pic'>
-		</div>
-	  <%= link_to '7'%>
-	  <div class = 'view_pic'>
-		</div>
-		<%= link_to '13'%>  	
-	</div>
-</div>
-
-<div class = 'article_block'>
-	<div class = 'article-_pic'>
-	</div>
-	<div class = 'article_title'>
-	  Название статьи, которое очень красиво смотрится, когда на него смотришь
-	</div>
-	<div class = 'article_preview'>
-		Пару слов об этой статье, которые ласкают слух.
-		<div class = 'comment_pic'>
-		</div>
-	  <%= link_to '7'%>
-	  <div class = 'view_pic'>
-		</div>
-		<%= link_to '13'%>  	
-	</div>
-</div>
-
-<div class = 'article_block'>
-	<div class = 'article-_pic'>
-	</div>
-	<div class = 'article_title'>
-	  Название статьи, которое очень красиво смотрится, когда на него смотришь
-	</div>
-	<div class = 'article_preview'>
-		Пару слов об этой статье, которые ласкают слух.
-		<div class = 'comment_pic'>
-		</div>
-	  <%= link_to '7'%>
-	  <div class = 'view_pic'>
-		</div>
-		<%= link_to '13'%>  	
-	</div>
-</div>
-
-<div class = 'article_block'>
-	<div class = 'article-_pic'>
-	</div>
-	<div class = 'article_title'>
-	  Название статьи, которое очень красиво смотрится, когда на него смотришь
-	</div>
-	<div class = 'article_preview'>
-		Пару слов об этой статье, которые ласкают слух.
-		<div class = 'comment_pic'>
-		</div>
-	  <%= link_to '7'%>
-	  <div class = 'view_pic'>
-		</div>
-		<%= link_to '13'%>  	
-	</div>
-</div>
-
-
+	<% end %>
+<% end %>

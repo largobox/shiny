@@ -8,16 +8,17 @@ Rails.application.routes.draw do
   get 'blog',   to: 'articles#blog'
   get 'basics', to: 'articles#basics'
   get 'guides', to: 'articles#guides'
+  get '/articles/:id', to: 'articles#show', as: 'article'
 
   get 'profile', to: 'users#profile'
   get 'edit_profile', to: 'users#edit_profile'
   patch 'update_profile', to: 'users#update_profile'
 
-  post 'comment_up',   to: 'comments#comment_up'
-  post 'comment_down',   to: 'comments#comment_down'
-  post 'create_sub_comment', to: 'comments#create_sub_comment'
+  post 'comment_like',   to: 'shiny_comments#comment_like'
+  post 'comment_dislike',   to: 'shiny_comments#comment_dislike'
+  post 'create_sub_comment', to: 'shiny_comments#create_sub_comment'
 
-  resources :comments
+  resources :shiny_comments
   resources :likes
   
   # The priority is based upon order of creation: first created -> highest priority.

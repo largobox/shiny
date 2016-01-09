@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_attached_file :profile_pic, styles: { medium: "300x300>", small: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :profile_pic, styles: { normal: "300x300>", small: "60x60>" }, default_url: "dota_default.jpg"
   validates_attachment_content_type :profile_pic, content_type: /\Aimage\/.*\Z/
 end

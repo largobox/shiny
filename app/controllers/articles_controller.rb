@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
-	def blog		
+
+	def blog
+		@articles = Article.all
 	end
 
 	def basics		
@@ -7,4 +9,12 @@ class ArticlesController < ApplicationController
 
 	def guides		
 	end
+
+	def show
+	  if @article = Article.find(params[:id])
+    else
+    	render text: 'Page not found', status: 404
+    end
+	end
+
 end
