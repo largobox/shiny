@@ -18,8 +18,9 @@
 
 body {
 	font-family: 'PT Sans', sans-serif;
-	background: #fff;
 	color: #595659;
+	margin: 0px;
+	padding: 0px;
 }
 
 h2 {
@@ -32,12 +33,42 @@ h3 {
 	color: #5E5E5E;
 }
 
-
 .top_cont {
+	position: relative;
   background: #61267E;
   height: 140px;
-  position: relative;
 }
+
+.mid_cont {
+	position: relative;
+	left: 50%;
+	margin-left: -470px;
+	width: 960px;
+	margin-bottom: 40px;
+}
+
+.bot_cont {
+	color: #fff;
+	height: 120px;
+  background: #61267E;
+}
+
+.content_cont {
+  display: inline-block;
+  width: 696px;
+}
+
+.sidebar {
+	margin-left: 20px;
+	margin-top: 15px;
+	vertical-align: top;
+  display: inline-block;
+  background: #61267E;
+  width: 240px;
+  min-height: 500px;
+  border-radius: 8px;
+}
+
 
 .login_cont {
   position: absolute;
@@ -52,29 +83,6 @@ h3 {
   color: #fff;	
 }
 
-.mid_cont {
-	position: absolute;
-	left: 50%;
-	margin-left: -490px;
-	margin-top: 20px;
-  width: 980px;
-  min-height: 800px;
-}
-
-.content_cont {
-  display: inline-block;
-  float: left;
-  width: 700px;
-  margin-right: 36px;
-}
-
-.sidebar {
-  display: inline-block;
-  background: #61267E;
-  margin-top: 15px;	
-  width: 240px;	
-  height: 300px;
-}
 
 .menu_cont {
 	background: #985EB5;
@@ -144,10 +152,11 @@ h3 {
   background: #61267E;
 }
 
+.devise_custom_mrg_left {
+	margin-left: 235px; 
+}
+
 .devise_custom_btn button:not(.disabled):hover {
-	font-family: 'PT Sans', sans-serif;
-	font-size: 18px;
-	font-weight: normal;
 	background: #985EB5;
 }
 
