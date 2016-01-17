@@ -6,64 +6,12 @@
 
 <div class = 'parent_comments_cont'>
 	<% @comments.each do |c| %>
-		<div class = 'comment_cont'>
-		  <div class = 'l_comment_block'>
-			  <div class = 'author_pic'>
-			  </div>
-		  </div>
-		  <div class = 'r_comment_block'>
-			  <div class = 'additional_inf'>
-			  	<div class = 'nickname'>
-			  	  Марон	
-			  	</div>
-			  	<div class = 'added_date'>
-			  	  01.01.2016	
-			  	</div>
-
-			  	<div class = 'likes_cont'>
-			  		<% if  current_user.nil?  %>
-			  			<div class = 'like_dislike_comment call_popup'>
-						  	<%= link_to '–', '#' %>
-				  		</div>
-				  	<% elsif not @user_comments_id.include? c.id %>
-				  		<div class = 'like_dislike_comment'>
-						  	<%= link_to '–', comment_dislike_path(c.id), method: :post %>
-				  		</div>
-				  	<% else %>
-				 			<div class = 'like_dislike_comment call_popup'>
-				  		</div>
-			  		<% end %>
-
-			  		<% if c.likes < 0 %>
-			  		  <div class = 'negative_likes'>
-			  		    <%= c.likes %>
-			  		  </div>
-			  		<% else %>
-			  		  <div class = 'positive_likes'>
-			  		    <%= c.likes %>
-			  		  </div>
-			  		<% end %>
-
-			  		<% if  current_user.nil?  %>
-			  			<div class = 'like_dislike_comment call_popup'>
-						  	<%= link_to '+', '#' %>
-				  		</div>
-				  	<% elsif not @user_comments_id.include? c.id %>
-				  		<div class = 'like_dislike_comment'>
-						  	<%= link_to '+', comment_like_path(c.id), method: :post %>
-				  		</div>
-				  	<% else %>
-				 			<div class = 'like_dislike_comment call_popup'>
-				  		</div>	
-			  		<% end %>
-			  	</div>
-
-			  </div>
-			  <div class = 'comment_body'>
-			  	<%= c.body %>
-			  </div>	
-		  </div>
-		</div>
+	  <%= render partial: 'comment', locals: {c: c[0]} %>
+	    <div class = 'sub_comment_cont' >
+				<% c[1].each do |sub_c| %>
+				  <%= render partial: 'comment', locals: {c: sub_c, sub_cmnt_lvl: 2} %>
+				<% end %>
+	    </div>
 	<% end %>
 
 <% if current_user.nil? %>

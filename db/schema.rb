@@ -31,13 +31,14 @@ ActiveRecord::Schema.define(version: 20160107123503) do
   create_table "articles", force: :cascade do |t|
     t.string   "title"
     t.string   "topic"
-    t.text     "body"
-    t.integer  "likes",                    default: 0
-    t.integer  "views",                    default: 0
-    t.integer  "comments",                 default: 0
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
     t.string   "preview"
+    t.text     "body"
+    t.integer  "like_counter",             default: 0
+    t.integer  "view_counter",             default: 0
+    t.integer  "comment_counter",          default: 0
+    t.boolean  "ended",                    default: false
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.string   "article_pic_file_name"
     t.string   "article_pic_content_type"
     t.integer  "article_pic_file_size"

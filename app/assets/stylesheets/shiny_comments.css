@@ -21,7 +21,8 @@
 }
 
 .r_comment_block {
-	width: 630px;
+	width: calc(100% - 70px);
+
   display: inline-block;
 }
 
@@ -58,8 +59,6 @@
 
 .likes_cont {
 	float: right;
-	vertical-align: top;
-	display: inline-block;
 	font-size: 16px;
 }
 
@@ -68,6 +67,7 @@
 }
 
 .like_dislike_comment {
+	cursor: pointer;
 	text-align: center;
 	vertical-align: top;
 	width: 20px;
@@ -165,11 +165,6 @@
 
 /* Popup end */
 
-#shiny_comment_body {
-  width: 664px;
-  min-height: 80px;
-}
-
 .add_comment_form [type=submit] {
 	float: right;
 	font-family: 'PT Sans', sans-serif;
@@ -191,3 +186,74 @@
 	text-align: center;
 	font-size: 18px;
 }
+
+/* Sub Comments start */
+
+.add_sub_comment_link {
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 8px;
+	font-size: 14px;
+	border-bottom: dashed 2px;
+	color: #BDB7BD;
+	text-decoration: none;	
+}
+
+.add_sub_comment_link:hover {
+  color: #595659;
+}
+
+.for_login_add_sub_comment_link {
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 8px;
+	font-size: 14px;
+	border-bottom: dashed 2px;
+	color: #BDB7BD;
+	text-decoration: none;
+}
+
+.for_login_add_sub_comment_link:hover {
+  color: #595659;
+}
+
+.shiny_comments_btn {
+  display: inline-block;
+	float: right;
+}
+
+#shiny_comment_body {
+	width: 96%;
+  min-height: 80px;
+	font-size: 16px;
+}
+
+.shiny_comments_btn button {
+	border-radius: 12px;
+  background: #61267E;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	height: 30px;
+}
+
+.shiny_comments_btn button:not(.disabled):hover {
+	background: #985EB5;
+}
+
+.sub_comment_close_mark {
+	background: url('mini-pic.png') 0px -425px;
+	width: 25px;
+	height: 32px;
+	margin-right: 3px;
+	float: right;
+}
+
+.sub_comment_cont {
+  margin-left: 50px;
+}
+
+/* Sub Comments end */
+
+
+

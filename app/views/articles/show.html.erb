@@ -119,11 +119,11 @@
 </div>
 
 <div class = 'article_additional_info'>
-	<%= link_to 'Посмотреть комментарии (26)', shiny_comments_path(article_id: @article.id) %>
+	<%= link_to "Глянуть комментарии (#{@article.comment_counter})", shiny_comments_path(article_id: @article.id) %>
 	<div class = 'article_inf_elem'>
-	  Просмотров: 14
+	  Просмотров: <%= @article.view_counter %>
 	</div>
 	<div class = 'article_inf_elem'>
-	  Обновлён: 01.01.2016
+	  Обновлён: <%= @article.updated_at.strftime('%F') %>
 	</div>
 </div>

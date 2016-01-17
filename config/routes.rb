@@ -5,17 +5,18 @@ Rails.application.routes.draw do
 
   root 'articles#blog'
 
-  get 'blog',   to: 'articles#blog'
-  get 'basics', to: 'articles#basics'
-  get 'guides', to: 'articles#guides'
+  get 'blog',          to: 'articles#blog'
+  get 'basics',        to: 'articles#basics'
+  get 'guides',        to: 'articles#guides'
   get '/articles/:id', to: 'articles#show', as: 'article'
 
-  get 'profile', to: 'users#profile'
-  get 'edit_profile', to: 'users#edit_profile'
+  get 'profile',          to: 'users#profile'
+  get 'edit_profile',     to: 'users#edit_profile'
   patch 'update_profile', to: 'users#update_profile'
 
-  post 'comment_like',   to: 'shiny_comments#comment_like'
-  post 'comment_dislike',   to: 'shiny_comments#comment_dislike'
+  post 'comment_like',       to: 'shiny_comments#comment_like'
+  post 'comment_dislike',    to: 'shiny_comments#comment_dislike'
+  get  'new_sub_comment',    to: 'shiny_comments#new_sub_comment'
   post 'create_sub_comment', to: 'shiny_comments#create_sub_comment'
 
   resources :shiny_comments
