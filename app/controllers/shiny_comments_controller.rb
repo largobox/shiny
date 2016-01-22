@@ -17,11 +17,16 @@ class ShinyCommentsController < ApplicationController
     @comment = ShinyComment.new(shiny_comment_params)
     @comment[:user_id] = current_user.id
 
+
     if @comment.body.blank?
       flash[:notice] = 'Комментарий не может быть пустым'
     else
       @comment.save
       flash[:notice] = 'Ваш комменарий будет опубликован сразу после премодерации'
+
+      article = Article.find(shiny_comment_params[:article_id])
+      article.comment_counter += 1
+      article.save
     end
 
     redirect_to :back
@@ -45,6 +50,12 @@ class ShinyCommentsController < ApplicationController
       redirect_to :back
     else
       @comment.save
+
+      cmnt = ShinyComment.find(shiny_comment_params[:comment_id])
+      article = Article.find(cmnt.article_id)
+      article.comment_counter += 1
+      article.save
+
       redirect_to :back
     end
 
