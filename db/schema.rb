@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160107123503) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admin_users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -53,9 +56,9 @@ ActiveRecord::Schema.define(version: 20160107123503) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "likes", ["article_id"], name: "index_likes_on_article_id"
-  add_index "likes", ["comment_id"], name: "index_likes_on_comment_id"
-  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
+  add_index "likes", ["article_id"], name: "index_likes_on_article_id", using: :btree
+  add_index "likes", ["comment_id"], name: "index_likes_on_comment_id", using: :btree
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id", using: :btree
 
   create_table "shiny_comments", force: :cascade do |t|
     t.text     "body"
@@ -67,9 +70,9 @@ ActiveRecord::Schema.define(version: 20160107123503) do
     t.datetime "updated_at",             null: false
   end
 
-  add_index "shiny_comments", ["article_id"], name: "index_shiny_comments_on_article_id"
-  add_index "shiny_comments", ["comment_id"], name: "index_shiny_comments_on_comment_id"
-  add_index "shiny_comments", ["user_id"], name: "index_shiny_comments_on_user_id"
+  add_index "shiny_comments", ["article_id"], name: "index_shiny_comments_on_article_id", using: :btree
+  add_index "shiny_comments", ["comment_id"], name: "index_shiny_comments_on_comment_id", using: :btree
+  add_index "shiny_comments", ["user_id"], name: "index_shiny_comments_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                    default: "",          null: false
@@ -93,8 +96,8 @@ ActiveRecord::Schema.define(version: 20160107123503) do
     t.integer  "comments_counter",         default: 0
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "views", force: :cascade do |t|
     t.integer  "article_id"
@@ -103,7 +106,7 @@ ActiveRecord::Schema.define(version: 20160107123503) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "views", ["article_id"], name: "index_views_on_article_id"
-  add_index "views", ["user_id"], name: "index_views_on_user_id"
+  add_index "views", ["article_id"], name: "index_views_on_article_id", using: :btree
+  add_index "views", ["user_id"], name: "index_views_on_user_id", using: :btree
 
 end
