@@ -12,6 +12,12 @@ ActiveAdmin.register ShinyComment do
 #   permitted << :other if resource.something?
 #   permitted
 # end
+	index do 
+	  column :id	
+	  column :body
+	  column :created_at
+	  actions
+	end
 
 
 end
