@@ -71,10 +71,10 @@
 .skill_pic img {
   border-radius: 8px;
   float: left; 
-  height: 82px;
+  height: 62px;
 	margin-top: 6px;
   margin-right: 9px;
-  width: 82px;
+  width: 62px;
 }
 
 .article_cont hr {
@@ -91,19 +91,41 @@
 	border-radius: 3px;
 }
 
-.item_pic {
+.small_skill_pic {
 	display: inline-block;
-
 }
 
-.item_pic img {
-	width: 32px;
-	float: left;
-	border-radius: 4px;
+.small_skill_pic img {
+	width: 18px;
+	border-radius: 3px;
+}
+
+.small_hero_pic {
+	display: inline-block;
+}
+
+.small_hero_pic img {
+	width: 45px;
+	border-radius: 3px;	
+}
+
+.item_build_cont {
+	width: 177px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.norm_item_pic {
+  display: inline-block;
+}
+
+.norm_item_pic img{
+	width: 56px;
+	border-radius: 5px;	
 }
 
 .article_text_block {
-	margin-bottom: 10px;
+	margin-bottom: 16px;
 }
 
 .article_additional_info {
@@ -119,3 +141,30 @@
 	font-size: 12px;
 	display: block;
 }
+
+.side_cont {
+	vertical-align: top;
+	width: 335px;
+	display: inline-block;
+}
+
+.side_cont_mrg_r {
+  margin-left: 10px;
+}
+
+.skill_build_cont {
+	margin-bottom: 16px;
+}
+
+.skill_build_elem {
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+}
+
+.skill_build_elem img {
+	width: 39px;
+	border-radius: 5px;
+}
+
+
