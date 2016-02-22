@@ -18,3 +18,4 @@ production:
   username: largobox_shiny58
   password: 7wmXwPCHz
   host: localhost
+  port: 5432
