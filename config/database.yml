@@ -17,5 +17,5 @@ production:
   encoding: utf8
   username: largobox_shiny58
   password: 7wmXwPCHz
-  host: localhost
+  host: postgresql0.locum.ru
   port: 5432
