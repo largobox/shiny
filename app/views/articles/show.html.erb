@@ -1,6 +1,5 @@
 <div class = 'article_cont'>
-	<%= image_tag('skill_picture/phantom_lancer_skill_1.png') %>
-	<%= raw @article.body %>
+	<%= raw ERB.new(@article.body).result(binding) %>
 </div>
 
 <div class = 'article_additional_info'>
