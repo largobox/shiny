@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
 	def blog
-		@articles = Article.all
+		@articles = Article.all.page(params[:page]).per(6)
 	end
 
 	def basics		

@@ -8,6 +8,7 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'paperclip', '~> 4.3'
 gem 'pg'
+gem 'kaminari'
 
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
