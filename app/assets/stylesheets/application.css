@@ -51,6 +51,13 @@ h3 {
 	color: #fff;
 	height: 120px;
   background: #61267E;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.bot_cont a{
+	font-size: 16px;
+  color: #fff;	
 }
 
 .content_cont {

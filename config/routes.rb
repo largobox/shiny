@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get 'guides',        to: 'articles#guides'
   get '/articles/:id', to: 'articles#show', as: 'article'
 
+  get 'contacts', to: 'application#contacts'
+  get 'about',    to: 'application#about'
+
   get 'profile',          to: 'users#profile'
   get 'edit_profile',     to: 'users#edit_profile'
   patch 'update_profile', to: 'users#update_profile'

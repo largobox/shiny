@@ -178,6 +178,10 @@
 	height: 28px;
 }
 
+.pagination_elem:hover {
+  background: #985EB5;	
+}
+
 .shiny_pagination {
 	text-align: center;
 	font-size: 18px;
@@ -191,10 +195,6 @@
 
 .pagination_page {
 	width: 26px;
-}
-
-.pagination_page:hover {
-  background: #985EB5;	
 }
 
 .pagination_page.current{
