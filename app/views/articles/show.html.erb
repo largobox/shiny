@@ -1,5 +1,6 @@
 <div class = 'article_cont'>
 	<%= raw ERB.new(@article.body).result(binding) %>
+</div>
 <div class = 'article_additional_info'>
 	<%= link_to "Глянуть комментарии (#{@article.comment_counter})", shiny_comments_path(article_id: @article.id) %>
 	<div class = 'article_inf_elem'>
