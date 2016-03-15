@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160122102045) do
+ActiveRecord::Schema.define(version: 20160315111902) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,40 @@ ActiveRecord::Schema.define(version: 20160122102045) do
     t.string   "article_pic_content_type"
     t.integer  "article_pic_file_size"
     t.datetime "article_pic_updated_at"
+  end
+
+  create_table "articles_heros", id: false, force: :cascade do |t|
+    t.integer "article_id"
+    t.integer "hero_id"
+  end
+
+  add_index "articles_heros", ["article_id"], name: "index_articles_heros_on_article_id", using: :btree
+  add_index "articles_heros", ["hero_id"], name: "index_articles_heros_on_hero_id", using: :btree
+
+  create_table "heros", force: :cascade do |t|
+    t.string   "name"
+    t.string   "main_attr"
+    t.string   "roles",                              array: true
+    t.float    "base_strength"
+    t.float    "increase_strength"
+    t.float    "base_agility"
+    t.float    "increase_agility"
+    t.float    "base_intelligence"
+    t.float    "increase_intelligence"
+    t.float    "base_movement_speed"
+    t.float    "base_armor"
+    t.float    "base_min_damage"
+    t.float    "base_max_damage"
+    t.float    "attack_range"
+    t.float    "base_attack_time"
+    t.float    "rotation_speed"
+    t.float    "base_hp_regen"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "hero_pic_file_name"
+    t.string   "hero_pic_content_type"
+    t.integer  "hero_pic_file_size"
+    t.datetime "hero_pic_updated_at"
   end
 
   create_table "likes", force: :cascade do |t|

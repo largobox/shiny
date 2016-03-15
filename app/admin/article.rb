@@ -3,7 +3,7 @@ ActiveAdmin.register Article do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :title, :topic, :preview, :body, :ended, :article_pic
+permit_params :title, :topic, :preview, :body, :ended, :article_pic, hero_ids: []
 
   form do |f|
 		inputs 'Details' do
@@ -12,6 +12,7 @@ permit_params :title, :topic, :preview, :body, :ended, :article_pic
 		  input :preview
 		  input :body
 		  input :ended
+		  input :heros, as: :check_boxes, multiple: true
 		  input :article_pic, as: :file, :hint => f.template.image_tag(f.object.article_pic.url(:normal))
     end
     actions
