@@ -1,6 +1,90 @@
 <div class = 'article_cont'>
+	
+	<h2><%= @article.title %></h2>
+
+  <div class = 'hero_inf_cont'>
+	  <div class = 'article_pic_on_show_page'>
+		  <%= image_tag @article.article_pic.url(:normal) %>
+	  </div>
+	  <div class = 'hero_roles'>
+	    <%= @hero.roles[1] %>
+	  </div>
+  </div>
+
+  <div class = 'hero_inf_cont'>
+	  <div class = 'base_attr_cont'>
+	  	<div class = 'base_attr_elem'>
+	  	  <%= image_tag 'str.png' %>
+	  	</div>
+	  	<div class = 'base_attr_elem_value'>
+	  		<%= "%g" % @hero.base_strength %> + <%= @hero.increase_strength %>
+	  	</div>
+	  	<div class = 'base_attr_elem'>
+	  	  <%= image_tag 'agl.png' %>
+	  	</div>
+	  	<div class = 'base_attr_elem_value'>
+	  		<%= "%g" % @hero.base_agility %> + <%= @hero.increase_agility %>
+	  	</div>
+	  	<div class = 'base_attr_elem'>
+	  	  <%= image_tag 'int.png' %>
+	  	</div>
+	  	<div class = 'base_attr_elem_value'>
+	  		<%= "%g" % @hero.base_intelligence %> + <%= @hero.increase_intelligence%>
+	  	</div>
+	  </div>
+
+	  <div class = 'hero_attr_cont_with_name'>
+	  	<div class = 'hero_attr_elem'>
+	  		Скорость передвижения: 
+	  	</div>
+	    <div class = 'hero_attr_elem'>
+	  	  Базовый армор: 
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  Урон: 
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  Дальность атаки: 
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  Базовая скорость атаки: 
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  Скорость поворота: 
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  Базовая регенерация HP: 
+	    </div>
+	  </div>
+
+	  <div class = 'hero_attr_cont_with_value'>
+	  	<div class = 'hero_attr_elem'>
+	  		<%= "%g" % @hero.base_movement_speed %>
+	  	</div>
+	    <div class = 'hero_attr_elem'>
+	    	<%= "%g" % @hero.base_armor %>
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  <%= @hero.base_min_damage %> - <%= @hero.base_max_damage %>
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  <%= @hero.attack_range %>
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  <%= @hero.base_attack_time %>
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  <%= @hero.rotation_speed %>
+	    </div>
+	    <div class = 'hero_attr_elem'>
+	  	  <%= @hero.base_hp_regen %>
+	    </div>
+	  </div>
+  </div>
+
 	<%= raw ERB.new(@article.body).result(binding) %>
 </div>
+
 <div class = 'article_additional_info'>
 	<%= link_to "Глянуть комментарии (#{@article.comment_counter})", shiny_comments_path(article_id: @article.id) %>
 	<div class = 'article_inf_elem'>

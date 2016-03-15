@@ -218,5 +218,60 @@
 	width: 48px;
 }
 
+.hero_attr_cont {
+	display: inline-block;
+}
 
+.article_pic_on_show_page {
+	display: inline-block;
+}
 
+.article_pic_on_show_page img{
+	border-radius: 12px;
+	width: 320px;
+	height: 198px;
+}
+
+.hero_attr_cont_with_name {
+	vertical-align: top;
+	font-weight: bold;
+	display: inline-block;
+	margin-left: 12px;
+}
+
+.hero_attr_cont_with_value {
+	margin-left: 20px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.hero_attr_elem {
+	margin-bottom: 4px;
+}
+
+.hero_inf_cont {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.base_attr_elem {
+	margin-left: 12px;
+	display: inline-block;
+}
+
+.base_attr_elem_value {
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: top;
+  margin-top: 3px;
+  margin-left: 3px;
+}
+
+.base_attr_cont {
+  margin-bottom: 5px;
+}
+
+.hero_roles {
+	font-size: 18px;
+	font-style: oblique;
+}

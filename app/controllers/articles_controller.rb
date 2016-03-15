@@ -11,8 +11,16 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		@article = Article.find(params[:id])
+       @hero = Hero.new
 
-	  if (Article.find_by id: params[:id]).nil?
+		if @article.topic == 'Гайд на героя'
+		  article_hero = (ArticlesHero.where article_id: @article.id).first
+		  @hero = Hero.find(article_hero.hero_id)
+		end
+
+
+	  if @article.nil?
     	render text: 'Wow... Sorry us, but page not found', status: 404
     else
       add_view
