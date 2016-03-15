@@ -149,7 +149,8 @@
 }
 
 .side_cont_mrg_r {
-  margin-left: 10px;
+	border-left: 1px solid #9a9a9a;
+	padding-left: 15px;
 }
 
 .skill_build_cont {
