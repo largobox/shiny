@@ -65,10 +65,10 @@
 	    	<%= "%g" % @hero.base_armor %>
 	    </div>
 	    <div class = 'hero_attr_elem'>
-	  	  <%= @hero.base_min_damage %> - <%= @hero.base_max_damage %>
+	  	  <%= "%g" % @hero.base_min_damage %> - <%= "%g" % @hero.base_max_damage %>
 	    </div>
 	    <div class = 'hero_attr_elem'>
-	  	  <%= @hero.attack_range %>
+	  	  <%= "%g" % @hero.attack_range %>
 	    </div>
 	    <div class = 'hero_attr_elem'>
 	  	  <%= @hero.base_attack_time %>
@@ -86,7 +86,7 @@
 </div>
 
 <div class = 'article_additional_info'>
-	<%= link_to "Глянуть комментарии (#{@article.comment_counter})", shiny_comments_path(article_id: @article.id) %>
+	<%= link_to "Посмотреть комментарии (#{@article.comment_counter})", shiny_comments_path(article_id: @article.id) %>
 	<div class = 'article_inf_elem'>
 	  Просмотров: <%= @article.view_counter %>
 	</div>

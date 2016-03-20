@@ -113,6 +113,7 @@
 	width: 177px;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	margin-left: 80px;
 }
 
 .norm_item_pic {
@@ -140,6 +141,10 @@
 .article_inf_elem {
 	font-size: 12px;
 	display: block;
+}
+
+.side_parent_cont {
+	margin-bottom: 10px;
 }
 
 .side_cont {
@@ -274,4 +279,41 @@
 .hero_roles {
 	font-size: 18px;
 	font-style: oblique;
+}
+
+.hero_img_in_pick {
+	display: inline-block;
+}
+
+.hero_img_in_pick img {
+	width: 86px;
+	border-radius: 5px;
+}
+
+.pick_divider {
+	font-size: 18px;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 15px;
+}
+
+.pick_formula {
+	margin-bottom: 10px;
+}
+
+.text_to_center {
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.img_to_center {
+	text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;  
+}
+
+.img_to_center img{
+	width: 600px;
+	border-radius: 12px;
 }
