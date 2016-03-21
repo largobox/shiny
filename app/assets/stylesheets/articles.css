@@ -39,22 +39,14 @@
   text-decoration: none;
 }
 
-.comment_pic {
-  margin-left: 10px;	
+.comment_and_view_pic {
 	display: inline-block;
-	background: #5E5E5E;
-	border-radius: 2px; 
-	height: 12px;
-	width: 19px;
+	font-size: 14px;
+	margin-left: 6px;
 }
 
-.view_pic {
-  margin-left: 10px;	
-	display: inline-block;
-	background: #5E5E5E;
-	border-radius: 2px; 
-	height: 12px;
-	width: 19px;
+.comment_and_view_pic img {
+	width: 20px;
 }
 
 .article_cont {

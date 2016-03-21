@@ -10,12 +10,14 @@
 				</div>
 				<div class = 'article_preview'>
 					  <%= a.preview %>
-					<div class = 'comment_pic'>
-					</div>
+					<div class = 'comment_and_view_pic'>
+						<%= image_tag 'comment.png' %>
 				    <%= a.comment_counter %>
-				  <div class = 'view_pic'>
 					</div>
+				  <div class = 'comment_and_view_pic'>
+						<%= image_tag 'view.png' %>	
 					  <%= a.view_counter %>
+					</div>
 				</div>
 			</div>
 		<% end %>
