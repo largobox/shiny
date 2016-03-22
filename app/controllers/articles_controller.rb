@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
 	def blog
-		@articles = Article.all.page(params[:page]).per(6)
+		@articles = Article.where(ended: true).page(params[:page]).per(6)
 	end
 
 	def basics		
