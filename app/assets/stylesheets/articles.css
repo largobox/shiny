@@ -305,7 +305,35 @@
   margin-bottom: 30px;  
 }
 
-.img_to_center img{
+.img_to_center img {
 	width: 600px;
 	border-radius: 12px;
+}
+
+/*Guides*/
+
+.guides_cont {
+	margin-top: 10px;
+}
+
+.guide_elem {
+	display: inline-block;
+}
+
+.guide_elem img {
+	width: 120px;
+	border-radius: 8px;
+}
+
+.main_letter {
+	font-size: 18px;
+	color: #595659;
+	text-decoration: underline;
+	margin-top: 10px;
+}
+
+.guide_hero_name {
+	font-size: 12px;
+	text-decoration: none;
+	color: #595659;
 }

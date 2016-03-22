@@ -1,1 +1,26 @@
-Тут будут все гайды трум пурум
+<div class = 'guides_cont'>
+
+	<% main_letter = 'A' %>
+  <div class ='main_letter'>
+      <%= main_letter %>
+  </div>
+
+	<% @guides.each_with_index do |g, ind| %>
+	    <% if g.name[0] != main_letter %>
+	      <%  main_letter = g.name[0] %>
+			  <div class ='main_letter'>
+			    <%= main_letter %>
+			  </div>
+	    <% end %>
+
+		<div class = 'guide_elem'>
+			<%= link_to article_path(g.articles[0].id) do %>
+			  <%= image_tag g.hero_pic.url(:normal) %>
+				<div class = 'guide_hero_name'>
+				  <%= g.name %>
+				</div>
+			<% end %>
+		</div>
+
+	<% end %>
+</div>

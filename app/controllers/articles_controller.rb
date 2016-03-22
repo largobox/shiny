@@ -7,7 +7,11 @@ class ArticlesController < ApplicationController
 	def basics		
 	end
 
-	def guides		
+	def guides
+	  @guides = Hero.joins("LEFT JOIN articles_heros ON articles_heros.hero_id = heros.id").
+	  							 joins("LEFT JOIN articles ON articles.id = articles_heros.article_id").
+	  						   where("articles.topic = 'Гайд на героя'").
+	  						   order :name   		
 	end
 
 	def show
