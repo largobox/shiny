@@ -7,7 +7,12 @@
 		  <%= image_tag @article.article_pic.url(:normal) %>
 	  </div>
 	  <div class = 'hero_roles'>
-	    <%= @hero.roles[1] %>
+	  	<% @hero.roles.each_with_index do |r,i| %>
+	  	  <%= r %>
+	  	  <% if i != @hero.roles.size - 1 and i != 0 %>
+	  	  ,
+	  	  <% end %>
+	  	<% end %>
 	  </div>
   </div>
 

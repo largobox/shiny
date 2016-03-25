@@ -41,7 +41,7 @@ permit_params :name,
       input :name, :input_html => { :max_width => 200 }
 		  input :hero_pic, as: :file, :hint => f.template.image_tag(f.object.hero_pic.url(:normal))
 		  input :main_attr, as: :select, collection: ['Сила', 'Ловкость', 'Интеллект']
-      input :roles, multiple: true, as: :check_boxes, collection: ['Carry', 'Support', 'Offlaner', 'Midder', 'Jungler', 'Pusher', 'Disabler', 'Initiator']
+      input :roles, multiple: true, as: :check_boxes, collection: ['Carry', 'Disabler', 'Initiator','Jungler', 'Midder', 'Nuker', 'Offlaner', 'Pusher', 'Support']
       input :base_strength
       input :increase_strength
       input :base_agility
