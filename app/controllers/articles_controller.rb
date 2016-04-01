@@ -15,6 +15,19 @@ class ArticlesController < ApplicationController
 	end
 
 	def show
+		        @overview = 'Краткий обзор'
+		          @skills = 'Механика скиллов'
+		       @pick_time = 'Стадия пика'
+		          @lining = 'Выбор линии'
+		 @hero_bad_choice = 'Неудобные противники'
+		@hero_good_choice = 'Удобные противники'
+		     @start_items = 'Начальный закуп'
+		      @early_game = 'Ранняя стадия'
+		        @mid_game = 'Середина игры'
+		       @late_game = 'Поздняя стадия'
+		  @good_teammates = 'Поговорим о союзниках'
+		     @skillbuilds = 'Скиллбилд'
+
 		@article = Article.find(params[:id])
        @hero = Hero.new
 
