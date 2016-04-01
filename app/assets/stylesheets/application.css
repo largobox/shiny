@@ -19,8 +19,10 @@
 body {
 	font-family: 'PT Sans', sans-serif;
 	color: #595659;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
+/*	position: relative;
+	display: block;*/
 }
 
 h2 {
@@ -34,111 +36,79 @@ h3 {
 }
 
 .top_cont {
-	position: relative;
-  background: #61267E;
-  height: 140px;
+	width: 100%;
+	height: 140px;
+	background: #61267E;
+  margin:0 auto;
+	display: block;
 }
 
 .mid_cont {
-	position: relative;
-	left: 50%;
-	margin-left: -470px;
-	width: 960px;
-	margin-bottom: 40px;
+	width: 1170px;
+	min-height: 900px;	
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 87px;
 }
 
 .bot_cont {
-	color: #fff;
-	height: 120px;
-  background: #61267E;
-  padding-left: 10px;
-  padding-top: 5px;
+	height: 140px;
+	background: #61267E;	
 }
 
-.bot_cont a{
-	font-size: 16px;
-  color: #fff;	
+.menu_cont {
+	width: 980px;
+	height: 48px;
+  background: #985EB5;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: 0 auto;
+}
+
+.menu_cont a {
+	font-size: 22px;
+	color: #fff;
+	text-decoration: none;
+	margin-left: 18px;
+}
+
+.menu_cont a :hover {
+	color: #61267E;
+}
+
+.menu_cont_elem {
+	display: inline-block;
+  width: 213px;
+  height: 48px;
+  border-right: 1px solid #61267E;
 }
 
 .content_cont {
-  display: inline-block;
-  width: 696px;
-}
-
-.sidebar {
-	margin-left: 20px;
-	margin-top: 15px;
-	vertical-align: top;
-  display: inline-block;
-  background: #61267E;
-  width: 240px;
-  min-height: 500px;
-  border-radius: 8px;
-}
-
-
-.login_cont {
-  position: absolute;
-  left: 50%;
-	right: 0px;
-	margin-top: 40px;
-	margin-left: 410px;
-}
-
-.login_cont a{
-	font-size: 16px;
-  color: #fff;	
-}
-
-
-.menu_cont {
-	background: #985EB5;
-  width: 980px;
-  height: 50px;
-  position: absolute;
-	left: 50%;
-	bottom: 0px;
-	margin-left: -490px;
-	border-top-left-radius: 8px;   
-	border-top-right-radius: 8px;   
-}
-
-.menu_elem {
-	width: 176px;
-	height: 50px;
 	display: inline-block;
-	margin-left: 40px;
-	font-size: 22px;
-	border-right: 1px solid #61267E;
+	width: 700px;
+	min-height: 900px;
 }
 
-.menu_elem p{
-	color: white;
+.left_side_cont {
+	width: 166px;
+	display: inline-block;
+	vertical-align: top;
+  margin-right: 14px;
+  min-height: 300px;
 }
 
-.menu_elem:hover p {
-	color: #61226F;
+.right_side_cont {
+	display: inline-block;
+	vertical-align: top;
+	width: 270px;
+	min-height: 400px;
+	background: #61267E;
+	border-radius: 12px;
+  margin-left: 6px;
 }
 
-.chosen_mark {
-	display: none;
-	border-radius: 45px;
-	width:70px;
-	height: 70px;
-	margin-left: 90px;
-	margin-top: -25px;
-	background: #fff;
-}
-
-#menu_elem_1:hover > #chosen_mark_1 {
-	display: block;
-}
-#menu_elem_2:hover > #chosen_mark_2 {
-	display: block;
-}
-#menu_elem_3:hover > #chosen_mark_3 {
-	display: block;
-}
+/* Devise */
 
 .devise_custom_cont {
 	font-size: 14px;

@@ -13,3 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+window.onscroll = function () 
+{
+    var scrollTop = window.pageYOffset ? window.pageYOffset : (document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop);
+
+    if(scrollTop >= 200){
+      document.getElementById('parent_content_list').style.marginTop = (scrollTop - 200) + 'px';  
+    }
+}

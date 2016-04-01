@@ -1,3 +1,77 @@
+<% content_for :article_content_list do %>
+
+<div id = 'parent_content_list'>
+	<div class = 'content_list'>
+
+		<b>Содержание</b>
+
+		<div class = 'content_list_elem dark_content_link'>
+		  <a href = '#begin'>К началу</a>
+		</div>
+
+		<div class = 'content_list_elem'>
+		  <a href = '#overview'>Краткий обзор</a>
+	  </div>
+		
+		<div class = 'content_list_elem dark_content_link'>
+		  <a href = '#skills'>Механика скиллов</a>
+		</div>
+
+		<div class = 'content_list_elem'>
+		  <a href = '#pick_time'>Стадия пика</a>
+		</div>  
+		
+		<div class = 'content_list_elem dark_content_link'>
+      <a href = '#lining'>Выбор линии</a>
+		</div>
+
+		<div class = 'content_list_elem'>
+		  <a href = '#hero_bad_choice'>Неудобные противники</a>
+		</div>
+
+		<div class = 'content_list_elem dark_content_link'>
+		  <a href = '#hero_good_choice'>Удобные противники</a>
+		</div>
+
+		<div class = 'content_list_elem'>
+		  <a href = '#start_items'>Начальный закуп</a>
+		</div>
+
+		<div class = 'content_list_elem dark_content_link'>	
+		  <a href = '#early_game'>Ранняя стадия</a>
+		</div>
+
+		<div class = 'content_list_elem'>
+		  <a href = '#mid_game'>Середина игры</a>
+		</div>
+
+		<div class = 'content_list_elem dark_content_link'>
+		  <a href = '#late_game'>Поздняя стадия</a>
+		</div>
+
+		<div class = 'content_list_elem'>
+		  <a href = '#good_teammate'>Поговорим о союзниках</a>
+		</div>
+
+		<div class = 'content_list_elem dark_content_link'>		
+		 <a href = '#skillbuild'>Скиллбилд</a>
+		</div>
+
+	</div>
+
+	<div class = 'hide_content_list'>
+		<div class = 'hide_triangle'></div>
+		Спрятать
+	</div>
+
+	<div class = 'show_content_list'>
+		Показать
+		<div class = 'hide_triangle'></div>
+	</div>
+</div>
+
+<% end %>
+
 <div class = 'article_cont'>
 	
 	<h2><%= @article.title %></h2>
