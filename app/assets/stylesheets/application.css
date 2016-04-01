@@ -57,6 +57,13 @@ h3 {
 	background: #61267E;	
 }
 
+.bot_cont a {
+	display: block;
+	margin-left: 12px;
+	font-size: 16px;
+	color: #fff;
+}
+
 .menu_cont {
 	width: 980px;
 	height: 48px;
