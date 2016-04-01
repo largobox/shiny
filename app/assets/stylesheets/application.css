@@ -103,9 +103,32 @@ h3 {
 	vertical-align: top;
 	width: 270px;
 	min-height: 400px;
+  margin-left: 6px;
+}
+
+.parent_login_cont {
+	width: 270px;
+	height: 40px;
+	background: #985EB5;
+	margin-bottom: 20px;
+	border-radius: 12px;
+}
+
+.login_cont {
+	padding-top: 8px;
+}
+
+.login_cont a{
+	color: #fff;
+	font-size: 16px;
+	margin-left: 22px;
+}
+
+.right_banner {
+	height: 360px;
+	width: 270px;
 	background: #61267E;
 	border-radius: 12px;
-  margin-left: 6px;
 }
 
 /* Devise */
