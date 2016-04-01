@@ -44,12 +44,11 @@ h3 {
 }
 
 .mid_cont {
-	width: 1170px;
+	width: 980px;
 	min-height: 900px;	
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 87px;
 }
 
 .bot_cont {
@@ -101,7 +100,7 @@ h3 {
 	width: 166px;
 	display: inline-block;
 	vertical-align: top;
-  margin-right: 14px;
+  margin-left: -169px;
   min-height: 300px;
 }
 
